@@ -18,7 +18,6 @@
 
 ### ⚠️ Critical Don'ts:
 - **DON'T** create monolithic layouts - extend existing base layouts
-- **DON'T** put color variables in `_custom.scss` - use `config-theme-colors.csv`
 - **DON'T** rebuild Bootstrap components - use `_includes/feature/`
 
 ---
