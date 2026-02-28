@@ -30,7 +30,7 @@
             {% endif %}
             aria-label="Jump video to {% if hours > 0 %}{{ hours }} hour{% if hours != 1 %}s{% endif %}{% if minutes > 0 or seconds > 0 %}, {% endif %}{% endif %}{% if minutes > 0 %}{{ minutes }} minute{% if minutes != 1 %}s{% endif %}{% if seconds > 0 %}, {% endif %}{% endif %}{% if seconds > 0 or hours == 0 and minutes == 0 %}{{ seconds }} second{% if seconds != 1 %}s{% endif %}{% endif %}"
           >
-            <span aria-hidden="true">{{ timestamp }}</span>
+            <span aria-hidden="true">{% if timestamp contains ',' %}{{ timestamp | split: ',' | first }}{% else %}{{ timestamp }}{% endif %}</span>
           </button>
         {% else %}
           {{ item.timestamp }}
