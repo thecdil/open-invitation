@@ -7,7 +7,12 @@
     var mediaElement = document.getElementById('audio-player');
 
     function timestampMP3(x) {
-        mediaElement.currentTime = x;
-        mediaElement.play();
+    mediaElement.currentTime = x;
+    var playPromise = mediaElement.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(function(err) {
+        if (err.name !== 'AbortError') console.error(err);
+        });
+    }
     }
 </script>
