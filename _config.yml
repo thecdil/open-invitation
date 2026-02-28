@@ -57,7 +57,7 @@ podcast:
   category: "Education"                     # Apple Podcasts category
   subcategory: "Higher Education"           # Apple Podcasts subcategory
   image: "/assets/img/podcast-cover.jpg"    # 3000x3000 recommended, 1400x1400 minimum
-  link: "https://thecdil.github.io/open-invitation/"
+  link: "https://cdil.lib.uidaho.edu/open-invitation/"
   copyright: "University of Idaho Library"
   apple_url: ""      # fill in after Apple approval
   spotify_url: ""    # fill in after Spotify approval

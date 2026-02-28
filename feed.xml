@@ -9,14 +9,14 @@ layout: null
      xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>{{ site.podcast.title | xml_escape }}</title>
-    <link>{{ site.podcast.link }}</link>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
     <description>{{ site.podcast.description | xml_escape }}</description>
     <language>{{ site.podcast.language }}</language>
     <copyright>{{ site.podcast.copyright | xml_escape }}</copyright>
     <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
     <itunes:author>{{ site.podcast.author | xml_escape }}</itunes:author>
-    <itunes:summary>{{ site.podcast.description | xml_escape }}</itunes:summary>
+    <itunes:summary>{{ site.podcast.description | strip_html | strip }}</itunes:summary>
     <itunes:type>{{ site.podcast.type }}</itunes:type>
     <itunes:owner>
       <itunes:name>{{ site.podcast.author | xml_escape }}</itunes:name>
@@ -30,7 +30,7 @@ layout: null
     <image>
       <url>{{ site.url }}{{ site.baseurl }}{{ site.podcast.image }}</url>
       <title>{{ site.podcast.title | xml_escape }}</title>
-      <link>{{ site.podcast.link }}</link>
+      <link>{{ site.url }}{{ site.baseurl }}/</link>
     </image>
     <podcast:locked>no</podcast:locked>
 
@@ -45,7 +45,7 @@ layout: null
       <enclosure url="{{ item.object_location }}" length="{{ item.audio_length | default: '1' }}" type="audio/mpeg"/>
       <itunes:title>{{ item.title | xml_escape }}</itunes:title>
       <itunes:author>{{ site.podcast.author | xml_escape }}</itunes:author>
-      <itunes:summary>{{ item.description | xml_escape }}</itunes:summary>
+      <itunes:summary><itunes:summary>{{ item.description | replace: "[", "" | replace: "](", " - " | split: ")" | join: "" | xml_escape }}</itunes:summary></itunes:summary>
       <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
       {% if item.duration %}<itunes:duration>{{ item.duration }}</itunes:duration>{% endif %}
       {% if item.episode_number %}<itunes:episode>{{ item.episode_number }}</itunes:episode>{% endif %}
