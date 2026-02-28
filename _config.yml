@@ -8,9 +8,9 @@
 # URL VARIABLES
 #
 # site domain, full URL to the production location of your collection
-url: 
+url: https://cdil.lib.uidaho.edu
 # path to location on the domain if necessary e.g. /digital/hjccc
-baseurl: 
+baseurl: /open-invitation
 # location of code, the full url to your github repository
 source-code: https://github.com/oralhistoryasdata/template
 
@@ -45,11 +45,23 @@ metadata: open-invitation
 ##########
 # PODCAST CONFIGURATION
 #
-# Podcast-specific settings
+# Podcast Feed Settings for RSS 2.0 distribution
 podcast:
-  name: "Open Invitation"
-  host: "Host Name"
-  description: "Conversations that open doors to new perspectives"
+  title: "Open Invitation"
+  description: "Open Invitation seeks to highlight Open Access efforts from across the University of Idaho. Interviews feature U of I faculty, staff, and students discussing their cutting-edge research, as well as the benefits and challenges of navigating the open access landscape."
+  author: "University of Idaho Library"
+  email: "cdil@uidaho.edu"  # MUST be a real email — Apple and Spotify send verification codes here
+  language: "en-us"
+  explicit: "false"
+  type: "episodic"                          # or "serial"
+  category: "Education"                     # Apple Podcasts category
+  subcategory: "Higher Education"           # Apple Podcasts subcategory
+  image: "/assets/img/podcast-cover.jpg"    # 3000x3000 recommended, 1400x1400 minimum
+  link: "https://thecdil.github.io/open-invitation/"
+  copyright: "University of Idaho Library"
+  apple_url: ""      # fill in after Apple approval
+  spotify_url: ""    # fill in after Spotify approval
+  amazon_url: ""     # fill in after Amazon approval
 
 # OHD metadata configuration
 objects: objects

@@ -26,6 +26,8 @@
 <link rel="stylesheet" href="{{ '/assets/lib/leaflet/MarkerCluster.Default.css' | relative_url }}">{% endif %}{%- endif -%}
 <!-- load custom css last to allow overrides -->
 <link rel="stylesheet" href="{{ '/assets/css/cb.css' | relative_url }}" type="text/css">
+<!-- podcast feed autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.podcast.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
 
 {% comment %} 
     Meta tags and analytics are added during production build ONLY 

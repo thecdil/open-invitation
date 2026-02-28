@@ -1,17 +1,49 @@
 <!-- cb: _includes/transcript/item/transcript-metadata.html -->
+ 
+
   <div class="my-2 row px-3 mt-4 meta">
     <div class="col">
+      <div class="episode-meta text-muted mb-3">
+        {% if page.season_number %}Season {{ page.season_number }}, {% endif %}
+        {% if page.episode_number %}Episode {{ page.episode_number }}{% endif %}
+        {% if page.duration %} · {{ page.duration }}{% endif %}
+        {% if page.date %} · {{ page.date | date: "%B %d, %Y" }}{% endif %}
+      </div>
+
+      <div class="episode-share mb-4">
+        <button class="btn btn-outline-secondary btn-sm" onclick="copyEpisodeLink(this)"
+                data-url="{{ site.url }}{{ site.baseurl }}/items/{{ page.objectid }}.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+          </svg>
+          Share Episode
+        </button>
+      </div>
+        {%if page.description and site.data.theme.transcript-fields contains 'description'%}<span class="me-3 px-2 fs-5 mb-0">{{page.description | markdownify }}</span>{%endif%}
       <p><span class="me-3">
-        {%if page.interviewee and site.data.theme.transcript-fields contains 'interviewee' %}<b>Interviewee:</b> {{page.interviewee}}<br> {%endif%}
-        {%if page.description and site.data.theme.transcript-fields contains 'description'%}<b>Description:</b>  <span class="me-3">{{page.description}}</span><br>{%endif%}
-        
-        {%if page.date and site.data.theme.transcript-fields contains 'date'%}<b>Date:</b> {{page.date}}<br>{%endif%} 
+       {%if page.interviewee and site.data.theme.transcript-fields contains 'interviewee' %}<b>Interviewee:</b> {{page.interviewee}}<br> {%endif%}
+      
+
+        {%if page.date and site.data.theme.transcript-fields contains 'date'%}<b>Date:</b> {{page.date}}<br>{%endif%}
         {%if page.location and site.data.theme.transcript-fields contains 'location' %}<b>Location:</b> {{page.location }}<br>{%endif%}
         {%if page.interviewer and site.data.theme.transcript-fields contains 'interviewer' %}<b>Interviewer:</b> {{page.interviewer}}<br>{%endif%}
-        
+
        </p>
       {% include transcript/item/download-buttons.html %}
       {% include transcript/item/metadata-modal.html %}
+
+      <script>
+      function copyEpisodeLink(btn) {
+        var url = btn.getAttribute('data-url');
+        navigator.clipboard.writeText(url).then(function() {
+          btn.innerHTML = '✓ Link Copied!';
+          setTimeout(function() {
+            btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"><path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/><path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/></svg> Share Episode';
+          }, 2000);
+        });
+      }
+      </script>
 
    </div>
    {%if page.bio and site.data.theme.transcript-fields contains 'bio'%}
