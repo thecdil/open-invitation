@@ -19,10 +19,10 @@ source-code: https://github.com/oralhistoryasdata/template
 # title of site appears in banner
 title: Open Invitation
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: Conversations that open doors to new perspectives
+tagline: Inviting conversations on open access from diverse fields and perspectives.
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "Open Invitation is a podcast featuring engaging conversations with thought leaders, innovators, and changemakers from diverse fields and backgrounds."
+description: "Open Invitation is a podcast featuring engaging conversations on all things open access at the University of Idaho and beyond."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: dcnb
 
@@ -48,7 +48,7 @@ metadata: open-invitation
 # Podcast Feed Settings for RSS 2.0 distribution
 podcast:
   title: "Open Invitation"
-  description: "Open Invitation seeks to highlight Open Access efforts from across the University of Idaho. Interviews feature U of I faculty, staff, and students discussing their cutting-edge research, as well as the benefits and challenges of navigating the open access landscape."
+  description: "Open Invitation seeks to highlight open access efforts from across the University of Idaho. Interviews feature U of I faculty, staff, and students discussing their cutting-edge research, as well as the benefits and challenges of navigating the open access landscape."
   author: "University of Idaho Library"
   email: "cdil@uidaho.edu"  # MUST be a real email — Apple and Spotify send verification codes here
   language: "en-us"
