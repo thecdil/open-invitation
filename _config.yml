@@ -59,9 +59,9 @@ podcast:
   image: "/assets/img/podcast-cover.jpg"    # 3000x3000 recommended, 1400x1400 minimum
   link: "https://cdil.lib.uidaho.edu/open-invitation/"
   copyright: "University of Idaho Library"
-  apple_url: ""      # fill in after Apple approval
-  spotify_url: ""    # fill in after Spotify approval
-  amazon_url: ""     # fill in after Amazon approval
+  apple_url: "https://podcasts.apple.com/us/podcast/open-invitation/id1886556688"      # fill in after Apple approval
+  spotify_url: "https://open.spotify.com/show/2RmrbW15arGH3DKkyNWF4L"    # fill in after Spotify approval
+  amazon_url: "https://music.amazon.com/podcasts/510ab731-fdbe-4985-babe-9ffd260bedd8"     # fill in after Amazon approval
 
 # OHD metadata configuration
 objects: objects
