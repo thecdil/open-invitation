@@ -15,11 +15,16 @@ layout: page-full-width
             font-weight: 300;
             color: #DAA520;
             letter-spacing: 0.1em;
+            text-align: center;
         }
         svg {
             width: 100%;
             height: auto;
             max-height: 350px;
+        }
+        .plant-container .figure-img {
+            transform: scale(1.6) translateY(-15%);
+            transform-origin: center center;
         }
     </style>
 
@@ -113,17 +118,21 @@ layout: page-full-width
 
 
 <div class="row align-items-center mt-2 ">
-            <!-- Left Honeycomb Pattern -->
-            <div class="col-md-4 offset-md-2">
+            <!-- Left Chair -->
+            <div class="col-md-4">
                 <div class="honeycomb-container">
                     {% include feature/image.html objectid="objects/studio-chair-transparent.png"%}
                 </div>
             </div>
             
-            <!-- Center Title -->
-        
+            <!-- Center Plant -->
+            <div class="col-md-4 plant-container">
+                <div class="honeycomb-container">
+                    {% include feature/image.html objectid="objects/plant_transparent.png"%}
+                </div>
+            </div>
             
-            <!-- Right Honeycomb Pattern -->
+            <!-- Right Chair -->
             <div class="col-md-4">
                 <div class="honeycomb-container">
                      {% include feature/image.html objectid="objects/studio-chair-transparent-flipped.png"%}
