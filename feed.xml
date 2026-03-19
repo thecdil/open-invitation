@@ -45,7 +45,7 @@ layout: null
       <enclosure url="{{ item.object_location }}" length="{{ item.audio_length | default: '1' }}" type="audio/mpeg"/>
       <itunes:title>{{ item.title | xml_escape }}</itunes:title>
       <itunes:author>{{ site.podcast.author | xml_escape }}</itunes:author>
-      <itunes:summary><itunes:summary>{{ item.description | replace: "[", "" | replace: "](", " - " | split: ")" | join: "" | xml_escape }}</itunes:summary></itunes:summary>
+      <itunes:summary>{{ item.description | xml_escape }}</itunes:summary>
       <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
       {% if item.duration %}<itunes:duration>{{ item.duration }}</itunes:duration>{% endif %}
       {% if item.episode_number %}<itunes:episode>{{ item.episode_number }}</itunes:episode>{% endif %}

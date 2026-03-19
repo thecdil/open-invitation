@@ -30,6 +30,35 @@
         {%if page.interviewer and site.data.theme.transcript-fields contains 'interviewer' %}<b>Interviewer:</b> {{page.interviewer}}<br>{%endif%}
 
        </p>
+
+      {% if page.resources %}
+      <div class="episode-resources mt-3">
+        <h5>Articles &amp; Resources</h5>
+        <ul>
+          {% assign resource_items = page.resources | split: "; " %}
+          {% for resource in resource_items %}
+            {% if resource != "" %}
+            <li>{{ resource | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.music %}
+      <div class="episode-music mt-3">
+        <h5>Music</h5>
+        <ul>
+          {% assign music_items = page.music | split: "; " %}
+          {% for track in music_items %}
+            {% if track != "" %}
+            <li>{{ track | strip }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
       {% include transcript/item/download-buttons.html %}
       {% include transcript/item/metadata-modal.html %}
 
