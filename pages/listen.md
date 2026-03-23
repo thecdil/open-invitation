@@ -15,7 +15,7 @@ Listen on your favorite podcast app:
 Copy this URL into any podcast app to subscribe directly:
 
 <div class="input-group mb-3" style="max-width:600px;">
-  <input type="text" class="form-control" value="{{ site.url }}{{ site.baseurl }}/feed.xml" id="rss-url" readonly>
+  <input type="text" class="form-control" value="{{ site.url }}{{ site.baseurl }}/feed.xml" id="rss-url" aria-label="RSS Feed URL" readonly>
   <button class="btn btn-outline-secondary" onclick="document.getElementById('rss-url').select(); navigator.clipboard.writeText(document.getElementById('rss-url').value); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
 </div>
 
