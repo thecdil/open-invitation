@@ -71,43 +71,30 @@
 // Platform-specific colors
 .subscribe-badge-apple {
   border-color: #000;
-  background: #fff;
-
-  &:hover {
     background: #000;
     color: #fff;
+    &:hover {
+      color: #fff;}
   }
-}
+
 
 .subscribe-badge-spotify {
   border-color: #1DB954;
   background: #fff;
-  color: #1DB954;
 
-  &:hover {
     background: #1DB954;
-    color: #fff;
+    color: black;
   }
-}
+
 
 .subscribe-badge-amazon {
-  border-color: #FF9900;
-  background: #fff;
-  color: #FF9900;
+  border-color: #23d3da;
 
-  &:hover {
-    background: #FF9900;
-    color: #fff;
+
+    background: #23d3da;
+    color: #black;
   }
-}
 
-.subscribe-badge-rss {
-  border-color: #f26522;
-  background: #fff;
-  color: #f26522;
 
-  &:hover {
-    background: #f26522;
-    color: #fff;
-  }
-}
+
+
