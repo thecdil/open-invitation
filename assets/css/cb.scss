@@ -6,10 +6,10 @@
 @charset "utf-8";
 
 /* base variables pulled from theme.yml */
-$theme-base-font-family: {{ site.data.theme.base-font-family | default: '""' }};
-$theme-base-font-size: {{ site.data.theme.base-font-size | default: '""' }};
-$theme-text-color: {{ site.data.theme.text-color | default: '""' }};
-$theme-link-color: {{ site.data.theme.link-color | default: '""' }};
+$theme-base-font-family: {{ site.data.theme.base-font-family | default: "'Public Sans', sans-serif" }};
+$theme-base-font-size: {{ site.data.theme.base-font-size | default: "1.1em" }};
+$theme-text-color: {{ site.data.theme.text-color | default: "#111" }};
+$theme-link-color: {{ site.data.theme.link-color | default: "#00AEC7" }};
 
 /* base tweaks to Bootstrap */
 @forward "base" with (

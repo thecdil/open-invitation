@@ -1,5 +1,5 @@
 color_class,color
-primary,#f1b300
+primary,#F1B300
 secondary,
 success,
 info,
@@ -7,3 +7,13 @@ warning,
 danger,
 light,
 dark,
+pride-gold,#F1B300
+black,#191919
+raspberry,#D7003F
+garnet,#7A0017
+lupine,#5E48FF
+huckleberry,#261882
+clearwater,#008080
+palouse,#034441
+leather,#AB4700
+bark,#552301
