@@ -12,7 +12,7 @@ url: https://cdil.lib.uidaho.edu
 # path to location on the domain if necessary e.g. /digital/hjccc
 baseurl: /open-invitation
 # location of code, the full url to your github repository
-source-code: https://github.com/oralhistoryasdata/template
+source-code: https://github.com/thecdil/open-invitation
 
 # SITE SETTINGS
 #
