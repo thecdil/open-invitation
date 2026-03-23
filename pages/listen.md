@@ -29,7 +29,7 @@ Copy this URL into any podcast app to subscribe directly:
 
 {{ item.description | truncatewords: 30 }}
 
-[Listen →]({{ '/items/' | append: item.objectid | append: '.html' | relative_url }})
+[Listen S{{ item.season_number}}E{{ item.episode_number }} →]({{ '/items/' | append: item.objectid | append: '.html' | relative_url }})
 
 ---
 {% endfor %}

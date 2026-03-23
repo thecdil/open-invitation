@@ -125,7 +125,9 @@ layout: page-full-width
             <!-- Left Chair -->
             <div class="col-md-10 offset-md-1">
                 <div class="honeycomb-container">
-                    {% include feature/image.html objectid="objects/podcast-cover-bottom.jpg" link="browse.html"%}
+                    <a href="{{ '/browse.html' | relative_url }}" title="Browse episodes">
+                        <img class="figure-img img-fluid rounded lazyload w-100" alt="Two plush yellow chairs face each other with a large leafy plant in between" src="{{ '/objects/podcast-cover-bottom.jpg' | relative_url }}" >
+                    </a>
                 </div>
             </div>
         
